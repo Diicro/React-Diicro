@@ -1,19 +1,33 @@
-import { CartWidget } from "../common/CartWidget"
-import './NavBar.css' 
+import { CartWidget } from "../common/CartWidget";
+import { Link } from "react-router-dom";
+import "./NavBar.css";
 
 export const NavBar = () => {
   return (
     <div className="navFlex">
-        <div>Fachapets</div>
-            <div className="ul">
-                <ul>
-                    <li className="li">Ropa Perros</li>
-                    <li className="li">Ropa Gatos</li>
-                    <li className="li">Accesorios</li>
-                </ul>
-            </div>
-        <CartWidget/>
+      <Link to="/">
+        <div className="title">Fachapets</div>
+      </Link>
+      <div className="ul">
+        <ul>
+          <Link to="/category/perros">
+            <li className="li">
+              <button>Ropa Perros</button>
+            </li>
+          </Link>
+          <Link to={`/category/gatos`}>
+            <li className="li">
+              <button>Ropa Gatos</button>
+            </li>
+          </Link>
+          <Link to="/category/accesorios">
+            <li className="li">
+              <button>Accesorios</button>
+            </li>
+          </Link>
+        </ul>
+      </div>
+      <CartWidget />
     </div>
-    
-  )
-}
+  );
+};

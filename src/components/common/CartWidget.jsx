@@ -1,10 +1,10 @@
 import { GiShoppingCart } from "react-icons/gi";
 
 export const CartWidget = () => {
-return (
+  return (
     <div>
-        <span>500</span>
-        <GiShoppingCart />
+      <span>500</span>
+      <GiShoppingCart />
     </div>
-)
-}
+  );
+};

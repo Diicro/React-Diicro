@@ -1,0 +1,8 @@
+.Listcontainer {
+  display: flex;
+  justify-content: space-around;
+}
+.Mantenimiento {
+  text-align: center;
+  font-size: 2rem;
+}
