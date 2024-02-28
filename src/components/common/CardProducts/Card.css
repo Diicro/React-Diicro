@@ -30,6 +30,7 @@ button:hover {
 button {
   background-color: blueviolet;
   border-color: rgba(36, 14, 57, 0.615);
+  cursor: pointer;
 }
 h2 {
   color: darkslateblue;

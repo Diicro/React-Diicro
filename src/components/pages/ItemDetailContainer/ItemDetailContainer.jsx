@@ -10,10 +10,14 @@ export const ItemDetailContainer = () => {
   const { id } = useParams();
 
   useEffect(() => {
-    getItem(id).then((resp) => {
-      setItem(resp);
-      setIsLoading(false);
-    });
+    getItem(id)
+      .then((resp) => {
+        setItem(resp);
+        setIsLoading(false);
+      })
+      .catch((error) => {
+        alert(error);
+      });
   }, [id]);
 
   return (
