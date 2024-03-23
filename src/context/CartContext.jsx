@@ -62,8 +62,9 @@ export const CartContextProvider = ({ children }) => {
     return existe;
   };
   const isInCart = (element) => {
-    let yaExiste = cart.some(
-      (elemento) => elemento.cantidad === element.cantidad
+    let yaExiste = cart.find(
+      (elemento) =>
+        elemento.id === element.id && elemento.cantidad === element.cantidad
     );
     return yaExiste;
   };

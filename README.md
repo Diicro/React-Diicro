@@ -1,8 +1,50 @@
-# React + Vite
+# Ecommerce Fachapets
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![](https://res.cloudinary.com/drye76tii/image/upload/v1708972963/React-p/karsten-winegeart-Qb7D1xw28Co-unsplash_luy2d1.jpg)
 
-Currently, two official plugins are available:
+**_Este es mi proyecto final para mi cursada de React,donde utilizamos los siguientes recursos:_**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+> Rutas y navegación
+
+> Hooks
+
+> Promesas
+
+> Asincronias
+
+> Childrens
+
+> Eventos
+
+> Context
+
+> Firebase
+
+> LocalStoreage
+
+> Metodos de array
+
+> librerias de estilos para los Alerts
+
+Configura las variable
+
+---
+
+**_Para poder levantar el proyecto se necesitan configurar las variables de entorno:_**
+
+```javascript
+
+VITE_APIKEY=
+VITE_AUTH_DOMAIN=
+VITE_PROJECT_ID=
+VITE_STOREAGE_BUCKET=
+VITE_MESSAGING_SENDER_ID=
+VITE_APP_ID=
+// pedir al Admin
+```
+
+Aqui dejo el Link a mi proyecto [FachaPets](https://react-diicro.vercel.app/)
+
+---
+
+Agradezco al profesor Jorge y al tutor Luis,no esperaba aprender tanto en este curso.
