@@ -47,7 +47,7 @@ export const ItemDetailContainer = () => {
     <>
       {isLoading ? (
         <div className="loading">
-          <img src="../../public/loading.gif" />
+          <img src="https://res.cloudinary.com/drye76tii/image/upload/v1711201512/loading_je5o9z.gif" />
         </div>
       ) : (
         <ItemDetail
