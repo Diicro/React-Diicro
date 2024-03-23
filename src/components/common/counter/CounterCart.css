@@ -1,0 +1,25 @@
+.counter {
+  width: 30px;
+  height: 20px;
+  background-color: blueviolet;
+  border-color: rgba(36, 14, 57, 0.615);
+  cursor: pointer;
+}
+.counterFlex {
+  padding-left: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+}
+.counter:hover {
+  border-color: rgba(0, 98, 64, 0.625);
+  background-color: rgb(0, 174, 177);
+  transition: 800ms;
+  box-shadow: 3px 3px 3px rgba(0, 71, 73, 0.676);
+}
+.checkFlex {
+  display: flex;
+  justify-content: space-between;
+  margin-inline: 10px;
+}

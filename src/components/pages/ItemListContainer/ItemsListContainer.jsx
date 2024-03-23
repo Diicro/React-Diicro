@@ -1,37 +1,53 @@
 import { useEffect, useState } from "react";
 import { ItemList } from "./ItemList";
 import { useParams } from "react-router-dom";
-import { products } from "../../../productsMocks";
+import { datab } from "../../../firebaseConfig";
+import { collection, getDocs, query, where } from "firebase/firestore";
 
 const ItemsListContainer = () => {
   const [items, setItems] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
   const { category } = useParams();
 
   useEffect(() => {
-    const peticion = new Promise((resolve, reject) => {
-      if (products.length > 0) {
-        resolve(products);
-      } else {
-        reject("No hay productos,estamos trabajando en eso");
-      }
-    });
+    let productsCollection = collection(datab, "products");
 
-    peticion.then((resp) => {
-      if (category) {
-        const filter = resp.filter((product) => product.category === category);
-        setItems(filter);
-      } else {
-        setItems(resp);
-      }
-    });
+    let filter;
+
+    if (category) {
+      let productsCollectionFilter = query(
+        productsCollection,
+        where("category", "==", category)
+      );
+      filter = productsCollectionFilter;
+    } else {
+      filter = productsCollection;
+    }
+
+    getDocs(filter)
+      .then((res) => {
+        let arrayProductsCollection = res.docs.map((elemento) => {
+          return { ...elemento.data(), id: elemento.id };
+        });
+
+        setItems(arrayProductsCollection);
+      })
+      .finally(() => setIsLoading(false));
   }, [category]);
 
+  if (isLoading) {
+    return (
+      <div className="loading">
+        <img src="../../public/loading.gif" />
+      </div>
+    );
+  }
   return (
     <>
-      {items.length < 1 ? (
-        <div className="Mantenimiento">
+      {items < 1 ? (
+        <div className="centerInfo">
           Por el momento esta sección esta en mantenimiento,puedes mirar todos
-          nuestro otros productos...
+          nuestros otros productos...
           <br />
           Error 404
         </div>

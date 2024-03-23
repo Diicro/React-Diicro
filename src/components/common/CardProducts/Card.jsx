@@ -1,6 +1,6 @@
 import "./Card.css";
 import { Link } from "react-router-dom";
-export const Card = ({ id, price, title, img, stock, description }) => {
+export const Card = ({ id, price, title, img, stock }) => {
   return (
     <div className="card">
       <div>
@@ -8,15 +8,16 @@ export const Card = ({ id, price, title, img, stock, description }) => {
       </div>
       <div>
         <h2>{title}</h2>
-        <h3>Unidades {stock}</h3>
+        <br />
+        <h3>Unidades: {stock}</h3>
+        <br />
         <h3>
           <span>$</span> {price}
         </h3>
-        <h3>{description}</h3>
       </div>
       <div className="btn">
         <Link to={`/item/${id}`}>
-          <button>Ir al detalle</button>
+          <button className="btnCard">Ir al detalle</button>
         </Link>
       </div>
     </div>

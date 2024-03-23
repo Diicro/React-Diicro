@@ -1,0 +1,90 @@
+.flexCart {
+  display: flex;
+  flex-wrap: wrap;
+  width: 70%;
+  justify-content: center;
+  gap: 50px;
+}
+.cartContainer {
+  width: 155px;
+  height: 280px;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+  border-radius: 10px;
+  text-align: center;
+  color: #242424;
+  margin-top: 20px;
+}
+.cartContainer button {
+  font-size: 0.5rem;
+  height: 280px;
+}
+.cartContainer button:hover {
+  background-color: rgb(230, 167, 167);
+  transition: 700ms;
+}
+
+.imgCart {
+  width: 145px;
+  height: 130px;
+  overflow: hidden;
+  border-radius: 10px;
+}
+.imgCart img {
+  width: 150px;
+  height: 150px;
+}
+.cartContent {
+  display: flex;
+  height: 85vh;
+}
+.checkOut {
+  background: rgb(36, 36, 36);
+  background: linear-gradient(
+    150deg,
+    rgba(36, 36, 36, 1) 25%,
+    rgba(62, 63, 72, 0.948412641423757) 97%,
+    rgba(47, 47, 47, 0.7999532576702556) 100%
+  );
+  width: 30%;
+  padding-left: 15px;
+  border-radius: 15px;
+  position: relative;
+}
+.checkOut h2 {
+  margin-top: 0;
+  text-align: center;
+}
+.btnCheck {
+  position: absolute;
+  bottom: 10px;
+  right: 60px;
+}
+.btnCheck button {
+  margin: 30px;
+  font-size: 1.1rem;
+  border-radius: 10px;
+}
+.btnRojo {
+  background-color: tomato;
+  border-color: rgb(255, 71, 71);
+}
+.btnVerde {
+  background-color: blueviolet;
+  border-color: rgba(36, 14, 57, 0.615);
+  cursor: pointer;
+}
+.btnVerde:hover {
+  border-color: rgba(0, 98, 64, 0.625);
+  background-color: rgb(0, 174, 177);
+  transition: 800ms;
+  box-shadow: 3px 3px 3px rgba(0, 71, 73, 0.676);
+}
+.productLess {
+  text-align: center;
+  color: aliceblue;
+}
+.priceFinal {
+  height: 200px;
+  padding-top: 180px;
+}

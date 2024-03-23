@@ -1,0 +1,40 @@
+.flexCheckout {
+  display: flex;
+  justify-content: center;
+  padding-top: 30px;
+}
+.flexForm {
+  display: flex;
+  flex-direction: column;
+  color: aqua;
+  align-items: center;
+  padding-top: 80px;
+  padding-bottom: 20px;
+  row-gap: 15px;
+  width: 300px;
+  height: 100%;
+  border: solid 2px darkslateblue;
+  border-radius: 5px;
+  background-color: rgba(240, 248, 255, 0.077);
+}
+form label {
+  font-size: 24px;
+}
+.btnCheckout {
+  margin-top: 30px;
+  background-color: blueviolet;
+  border-color: rgb(131, 43, 226);
+  border-radius: 15px;
+}
+.btnCheckout:hover {
+  border-color: rgba(0, 98, 64, 0.625);
+  background-color: rgb(0, 174, 177);
+  transition: 800ms;
+  box-shadow: 3px 3px 3px rgba(0, 71, 73, 0.676);
+  cursor: pointer;
+}
+.idOrder {
+  color: aliceblue;
+  padding-top: 25px;
+  font-size: 1.8rem;
+}

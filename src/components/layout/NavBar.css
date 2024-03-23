@@ -1,3 +1,8 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
 .title {
   font-size: 35.2px;
   text-align: center;
@@ -7,9 +12,15 @@
 .navFlex {
   display: flex;
   justify-content: space-between;
-  height: 100px;
+  height: 75px;
   margin: 5px;
   font-size: 24px;
+  border-bottom: darkslateblue solid 1px;
+  border-radius: 0 0 12px 12px;
+
+  padding: 0;
+  margin: 0;
+  box-sizing: 0;
 }
 ul {
   display: flex;

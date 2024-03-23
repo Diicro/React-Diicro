@@ -1,5 +1,14 @@
+import { CounterCartContainer } from "../../common/counter/CounterCartContainer";
 import "./ItemDetailContainer.css";
-export const ItemDetail = ({ img, description, title, price, stock }) => {
+export const ItemDetail = ({
+  img,
+  description,
+  title,
+  price,
+  stock,
+  addCart,
+  inicialCount,
+}) => {
   return (
     <div className="center">
       <div className="flexbox">
@@ -16,6 +25,12 @@ export const ItemDetail = ({ img, description, title, price, stock }) => {
             <span>Unidades : </span>
             {stock}
           </h3>
+
+          <CounterCartContainer
+            stock={stock}
+            addCart={addCart}
+            inicialCount={inicialCount}
+          />
         </div>
       </div>
     </div>
